@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global State Example</title>
+</head>
+<body>
+    <h1>Global State Example</h1>
+
+    <div id="app">
+        <p>Counter: <span id="counter">0</span></p>
+        <button onclick="incrementCounter()">Increment Counter</button>
+        <button onclick="resetCounter()">Reset Counter</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function updateCounterDisplay() {
+            document.getElementById('counter').innerText = counter;
+        }
+
+        function incrementCounter() {
+            counter++;
+            updateCounterDisplay();
+        }
+
+        function resetCounter() {
+            counter = 0;
+            updateCounterDisplay();
+        }
+
+        updateCounterDisplay();
+    </script>
+</body>
+</html>
